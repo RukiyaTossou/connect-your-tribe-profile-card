@@ -4,9 +4,11 @@ import express from 'express'
 // Importeer de zelfgemaakte functie fetchJson uit de ./helpers map
 import fetchJson from './helpers/fetch-json.js'
 
-// Haal data op uit de FDND API, ga pas verder als de data gedownload is
-const data = await fetchJson('https://fdnd.directus.app/items/person/65')
-// console.log(data); // uncomment om de opgehaalde data te checken
+// Haal data op uit de FDND API, ga pas verder als de data gedownload 
+// Als je krulhaken gebruikt om de data heen kan je de binnenste data pakken. Nu hoef je in je html geen data.name te gebruiken
+const data = await fetchJson('https://fdnd.directus.app/items/person/58')
+
+console.log(data.data.name); // uncomment om de opgehaalde data te checken
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -18,6 +20,7 @@ app.set('views', './views')
 
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
+app.use('/images', express.static('images'));
 
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
@@ -29,9 +32,11 @@ app.get('/', function (request, response) {
 app.post('/', function (request, response) {
   // Er is nog geen afhandeling van POST, redirect naar GET op /
   response.redirect(303, '/')
+
 })
 
-// Stel het poortnummer in waar express op moet gaan luisteren
+// Stel het poortnummer in waar express op moet gaan luisteren. 
+// code word gedraaid met het poort nummer OF gebruikt localhost 8000.
 app.set('port', process.env.PORT || 8000)
 
 // Start express op, haal daarbij het zojuist ingestelde poortnummer op

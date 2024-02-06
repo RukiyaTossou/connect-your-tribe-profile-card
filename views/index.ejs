@@ -1,14 +1,45 @@
 <%- include('./partials/head') %>
-
-<article>
-  <header>
-    <h1>Hallo</h1>
-    <p>mijn naam is</p>
-  </header>
-
-  <p><%= data.name %></p>
-
-  <footer></footer>
+<div class="card-container">
+  <article class="card">
+  <!-- voorkant -->
+    <div class="front">
+      <header>
+        <img src="/images/Squad1F-Rukiya.jpg" alt="profiel foto">
+          <h1>Rukiya Tossou</h1>
+          <p><em>HVA student </em></p>
+      </header>
+      <div class="blackBox">
+        <!-- alle streepjes -->
+        <div id="streep-paars1"></div>
+        <div id="streep-oranje1"></div>
+        <div id="streep-blauw1"></div>
+        <div id="streep-geel1"></div>
+        <div id="streep-rood1"></div>
+        <div id="streep-rood2"></div>
+        <div id="streep-rose1"></div>
+        <div id="streep-groen1"></div>
+        <div id="streep-donker-rose1"></div>
+        <div id="streep-paars2"></div>
+        <div id="streep-lichtblauw1"></div>
+        <div id="streep-donker-rose2"></div>
+        <div id="streep-rose2"></div>
+        <div id="streep-oranje2"></div>
+        <div id="streep-blauw2"></div>
+      </div>
+     </div>
+  <!-- achterkant -->
+    <div class="back">
+      <h2 class="text-white">mail:</h2>
+      <div class="mail"> 
+        <a href="mailto:rukiya.tossou@hva.nl">&#128231</a>
+      </div>
+      <h3> github</h2>
+     
+      <div class="github">
+        <a href="https://github.com/RukiyaTossou" title=""> </a>
+      </div>
+    </div>
+  
 </article>
-
+</div>
 <%- include('./partials/foot') %>
