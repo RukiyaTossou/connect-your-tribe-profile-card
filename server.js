@@ -6,9 +6,10 @@ import fetchJson from './helpers/fetch-json.js'
 
 // Haal data op uit de FDND API, ga pas verder als de data gedownload 
 // Als je krulhaken gebruikt om de data heen kan je de binnenste data pakken. Nu hoef je in je html geen data.name te gebruiken
-const data = await fetchJson('https://fdnd.directus.app/items/person/58')
+const {data} = await fetchJson('https://fdnd.directus.app/items/person/58')
 
-console.log(data.data.name); // uncomment om de opgehaalde data te checken
+console.log(data.name); // uncomment om de opgehaalde data te checken
+console.log(data.surname);
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -36,7 +37,7 @@ app.post('/', function (request, response) {
 })
 
 // Stel het poortnummer in waar express op moet gaan luisteren. 
-// code word gedraaid met het poort nummer OF gebruikt localhost 8000.
+// code word gedraaid met het poort nummer OF gebruikt localhost.
 app.set('port', process.env.PORT || 8000)
 
 // Start express op, haal daarbij het zojuist ingestelde poortnummer op
