@@ -1,49 +1,37 @@
 <%- include('./partials/head') %>
-<div class="card-container">
+<div class="container">
   <article class="card">
-  <!-- voorkant -->
-    <div class="front">
-      <header>
-        <img src="/images/Squad1F-Rukiya.jpg" alt="profiel foto">
-          <h1> <%- name %>  <%- surname %></h1>
-          <p><em>HVA student </em></p>
-      </header>
-      <div class="blackBox">
-        <!-- alle streepjes -->
-        <div id="streep-paars1"></div>
-        <div id="streep-oranje1"></div>
-        <div id="streep-blauw1"></div>
-        <div id="streep-geel1"></div>
-        <div id="streep-rood1"></div>
-        <div id="streep-rood2"></div>
-        <div id="streep-rose1"></div>
-        <div id="streep-groen1"></div>
-        <div id="streep-donker-rose1"></div>
-        <div id="streep-paars2"></div>
-        <div id="streep-lichtblauw1"></div>
-        <div id="streep-donker-rose2"></div>
-        <div id="streep-rose2"></div>
-        <div id="streep-oranje2"></div>
-        <div id="streep-blauw2"></div>
+      <div class="front">
+        <img class="turning-arrow" src="draai-pijltje.svg" alt="draaipijltje">
+        <img class="white-drawing" src="drawing1.svg" alt="witte flowy lijn">
+        <header>
+            <h1 id="my-name"> <%- name %>  <%- surname %></h1>
+            <p>
+              Hva Student
+            </p>
+        </header>
+        <section class="figure">
+         <div class="bovenste">
+        
+         </div>
+        </section>
       </div>
-     </div>
-  <!-- achterkant -->
-    <div class="back">
-      <section>
-        <h1>About me:</h1>
-        <p class="text-bio"><%- bio %></p>
-      </section>
-      <h2 class="text-white">mail:</h2>
-      <div class="mail"> 
-        <a href="mailto:rukiya.tossou@hva.nl">&#128231</a>
-      </div>
-      <h3> github</h2>
-     
-      <div class="github">
-        <a href="https://github.com/RukiyaTossou" title=""> </a>
-      </div>
-    </div>
-  
-</article>
+   
+      <div class="back">
+        <section>
+          <h1 id="aboutme-title">About me </h1>
+          <p class="text-bio"><%- bio %></p>
+        </section>
+        <section>
+          <div class="mail-icon"> 
+            <a href="mailto:rukiya.tossou@hva.nl"></a>
+          </div>
+         
+          <div class="github-icon">
+            <a href="https://github.com/RukiyaTossou" title=""></a>
+          </div>
+        </section>   
+  </article>
+
 </div>
 <%- include('./partials/foot') %>

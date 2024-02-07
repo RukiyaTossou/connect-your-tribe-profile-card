@@ -9,7 +9,7 @@ import fetchJson from './helpers/fetch-json.js'
 const {data} = await fetchJson('https://fdnd.directus.app/items/person/58')
 
 console.log(data.name); // uncomment om de opgehaalde data te checken
-console.log(data.surname);
+
 
 // Maak een nieuwe express app aan
 const app = express()
@@ -21,7 +21,7 @@ app.set('views', './views')
 
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
-app.use('/images', express.static('images'));
+// app.use('/images', express.static('images'));
 
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
