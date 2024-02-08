@@ -1,8 +1,11 @@
+console.log("Script is running!"); // Check if the script is running
+
 let card = document.querySelector('.card');
+let turnButton = document.querySelector('.button-turning');
 
-card.addEventListener('click', cardflip);
+turnButton.addEventListener('click', flipCard);
 
-function cardflip() {
-    console.log("Kaart is omgedraaid"); // Controleer of de functie wordt uitgevoerd
-    card.classList.toggle("flip");
+function flipCard(){
+    console.log("Card clicked!");
+    card.classList.toggle('flip');
 }
