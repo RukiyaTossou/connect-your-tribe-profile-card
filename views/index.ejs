@@ -2,8 +2,11 @@
 <div class="container">
   <article class="card">
       <div class="front">
-        <img class="turning-arrow" src="draai-pijltje.svg" alt="draaipijltje">
-        <img class="white-drawing" src="drawing1.svg" alt="witte flowy lijn">
+        <div class="turning-arrow">
+          <button class="button-turning"><img src="/images/draai-pijltje.svg" alt="draaipijltje"></button>
+        </div>
+        
+        <img class="white-drawing" src="/images/drawing1.svg" alt="witte flowy lijn">
         <header>
             <h1 id="my-name"> <%- name %>  <%- surname %></h1>
             <p>
@@ -18,6 +21,9 @@
       </div>
    
       <div class="back">
+        <div class="turning-arrow">
+          <button class="button-turning"><img src="/images/draai-pijltje.svg" alt="draaipijltje"></button>
+        </div>
         <section>
           <h1 id="aboutme-title">About me </h1>
           <p class="text-bio"><%- bio %></p>
