@@ -21,7 +21,7 @@ app.set('views', './views')
 
 // Gebruik de map 'public' voor statische resources
 app.use(express.static('public'))
-// app.use('/images', express.static('images'));
+app.use('/script', express.static('script'));
 
 // Maak een GET route voor de index
 app.get('/', function (request, response) {
